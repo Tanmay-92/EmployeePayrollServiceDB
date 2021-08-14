@@ -1,0 +1,300 @@
++----+----------+------------+---------------+------------+--------+-----------+------------+-------------+------------+----------+---------+------------+
+|  1 | JOHN     | 7412856421 | CALIFORNIA    | Sales      | M      |     20000 |       NULL |        NULL |       NULL |     NULL |  100000 | 2021-05-04 |
+|  2 | NICK     | 7895236410 | OKLOHOMA      | Sales      | M      |     20000 |       NULL |        NULL |       NULL |     NULL |  200000 | 2021-04-03 |
+|  3 | WAYNE    |  999123999 | GOTHAM CITY   | Sales      | F      |     20000 |       NULL |        NULL |       NULL |     NULL |  300000 | 2021-03-02 |
+|  4 | NICHOLAS | 9823651240 | NEW YORK      | Sales      | M      |     20000 |       NULL |        NULL |       NULL |     NULL |  600000 | 2021-06-06 |
+|  5 | KANE     | 9864251320 | SAN FRANCISCO | Sales      | M      |     20000 |       NULL |        NULL |       NULL |     NULL |  700000 | 2021-07-07 |
+|  6 | Terisa   |     985628 | Mumbai        | Sales      | F      |     20000 |    1000000 |     2000000 |     500000 | 15000000 | 3000000 | 2018-01-03 |
++----+----------+------------+---------------+------------+--------+-----------+------------+-------------+------------+----------+---------+------------+
+6 rows in set (0.00 sec)
+
+mysql>  update employee_payroll set Department = 'Sales' WHERE id = '1';
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 1  Changed: 0  Warnings: 0
+
+mysql> SELECT *FROM EMPLOYEE_PAYROLL;
++----+----------+------------+---------------+------------+--------+-----------+------------+-------------+------------+----------+---------+------------+
+| ID | NAME     | PHONE_NO   | ADDRESS       | DEPARTMENT | GENDER | BASIC_PAY | DEDUCTIONS | TAXABLE_PAY | INCOME_TAX | NET_PAY  | SALARY  | START      |
++----+----------+------------+---------------+------------+--------+-----------+------------+-------------+------------+----------+---------+------------+
+|  1 | JOHN     | 7412856421 | CALIFORNIA    | Sales      | M      |     20000 |       NULL |        NULL |       NULL |     NULL |  100000 | 2021-05-04 |
+|  2 | NICK     | 7895236410 | OKLOHOMA      | Sales      | M      |     20000 |       NULL |        NULL |       NULL |     NULL |  200000 | 2021-04-03 |
+|  3 | WAYNE    |  999123999 | GOTHAM CITY   | Sales      | F      |     20000 |       NULL |        NULL |       NULL |     NULL |  300000 | 2021-03-02 |
+|  4 | NICHOLAS | 9823651240 | NEW YORK      | Sales      | M      |     20000 |       NULL |        NULL |       NULL |     NULL |  600000 | 2021-06-06 |
+|  5 | KANE     | 9864251320 | SAN FRANCISCO | Sales      | M      |     20000 |       NULL |        NULL |       NULL |     NULL |  700000 | 2021-07-07 |
+|  6 | Terisa   |     985628 | Mumbai        | Sales      | F      |     20000 |    1000000 |     2000000 |     500000 | 15000000 | 3000000 | 2018-01-03 |
++----+----------+------------+---------------+------------+--------+-----------+------------+-------------+------------+----------+---------+------------+
+6 rows in set (0.00 sec)
+
+mysql>  update employee_payroll set Department = 'Marketing' WHERE id = '1';
+Query OK, 1 row affected (0.04 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT *FROM EMPLOYEE_PAYROLL;
++----+----------+------------+---------------+------------+--------+-----------+------------+-------------+------------+----------+---------+------------+
+| ID | NAME     | PHONE_NO   | ADDRESS       | DEPARTMENT | GENDER | BASIC_PAY | DEDUCTIONS | TAXABLE_PAY | INCOME_TAX | NET_PAY  | SALARY  | START      |
++----+----------+------------+---------------+------------+--------+-----------+------------+-------------+------------+----------+---------+------------+
+|  1 | JOHN     | 7412856421 | CALIFORNIA    | Marketing  | M      |     20000 |       NULL |        NULL |       NULL |     NULL |  100000 | 2021-05-04 |
+|  2 | NICK     | 7895236410 | OKLOHOMA      | Sales      | M      |     20000 |       NULL |        NULL |       NULL |     NULL |  200000 | 2021-04-03 |
+|  3 | WAYNE    |  999123999 | GOTHAM CITY   | Sales      | F      |     20000 |       NULL |        NULL |       NULL |     NULL |  300000 | 2021-03-02 |
+|  4 | NICHOLAS | 9823651240 | NEW YORK      | Sales      | M      |     20000 |       NULL |        NULL |       NULL |     NULL |  600000 | 2021-06-06 |
+|  5 | KANE     | 9864251320 | SAN FRANCISCO | Sales      | M      |     20000 |       NULL |        NULL |       NULL |     NULL |  700000 | 2021-07-07 |
+|  6 | Terisa   |     985628 | Mumbai        | Sales      | F      |     20000 |    1000000 |     2000000 |     500000 | 15000000 | 3000000 | 2018-01-03 |
++----+----------+------------+---------------+------------+--------+-----------+------------+-------------+------------+----------+---------+------------+
+6 rows in set (0.00 sec)
+
+mysql>  update employee_payroll set Department = 'Marketing' WHERE id = '2';
+Query OK, 1 row affected (0.05 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql>  update employee_payroll set Department = 'Marketing' WHERE id = '3';
+Query OK, 1 row affected (0.07 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT *FROM EMPLOYEE_PAYROLL;
++----+----------+------------+---------------+------------+--------+-----------+------------+-------------+------------+----------+---------+------------+
+| ID | NAME     | PHONE_NO   | ADDRESS       | DEPARTMENT | GENDER | BASIC_PAY | DEDUCTIONS | TAXABLE_PAY | INCOME_TAX | NET_PAY  | SALARY  | START      |
++----+----------+------------+---------------+------------+--------+-----------+------------+-------------+------------+----------+---------+------------+
+|  1 | JOHN     | 7412856421 | CALIFORNIA    | Marketing  | M      |     20000 |       NULL |        NULL |       NULL |     NULL |  100000 | 2021-05-04 |
+|  2 | NICK     | 7895236410 | OKLOHOMA      | Marketing  | M      |     20000 |       NULL |        NULL |       NULL |     NULL |  200000 | 2021-04-03 |
+|  3 | WAYNE    |  999123999 | GOTHAM CITY   | Marketing  | F      |     20000 |       NULL |        NULL |       NULL |     NULL |  300000 | 2021-03-02 |
+|  4 | NICHOLAS | 9823651240 | NEW YORK      | Sales      | M      |     20000 |       NULL |        NULL |       NULL |     NULL |  600000 | 2021-06-06 |
+|  5 | KANE     | 9864251320 | SAN FRANCISCO | Sales      | M      |     20000 |       NULL |        NULL |       NULL |     NULL |  700000 | 2021-07-07 |
+|  6 | Terisa   |     985628 | Mumbai        | Sales      | F      |     20000 |    1000000 |     2000000 |     500000 | 15000000 | 3000000 | 2018-01-03 |
++----+----------+------------+---------------+------------+--------+-----------+------------+-------------+------------+----------+---------+------------+
+6 rows in set (0.03 sec)
+
+mysql>  update employee_payroll set Department = 'Marketing' WHERE id = '6';
+Query OK, 1 row affected (0.05 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql>  update employee_payroll set Department = 'Sales' WHERE id = '3';
+Query OK, 1 row affected (0.07 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT *FROM EMPLOYEE_PAYROLL;
++----+----------+------------+---------------+------------+--------+-----------+------------+-------------+------------+----------+---------+------------+
+| ID | NAME     | PHONE_NO   | ADDRESS       | DEPARTMENT | GENDER | BASIC_PAY | DEDUCTIONS | TAXABLE_PAY | INCOME_TAX | NET_PAY  | SALARY  | START      |
++----+----------+------------+---------------+------------+--------+-----------+------------+-------------+------------+----------+---------+------------+
+|  1 | JOHN     | 7412856421 | CALIFORNIA    | Marketing  | M      |     20000 |       NULL |        NULL |       NULL |     NULL |  100000 | 2021-05-04 |
+|  2 | NICK     | 7895236410 | OKLOHOMA      | Marketing  | M      |     20000 |       NULL |        NULL |       NULL |     NULL |  200000 | 2021-04-03 |
+|  3 | WAYNE    |  999123999 | GOTHAM CITY   | Sales      | F      |     20000 |       NULL |        NULL |       NULL |     NULL |  300000 | 2021-03-02 |
+|  4 | NICHOLAS | 9823651240 | NEW YORK      | Sales      | M      |     20000 |       NULL |        NULL |       NULL |     NULL |  600000 | 2021-06-06 |
+|  5 | KANE     | 9864251320 | SAN FRANCISCO | Sales      | M      |     20000 |       NULL |        NULL |       NULL |     NULL |  700000 | 2021-07-07 |
+|  6 | Terisa   |     985628 | Mumbai        | Marketing  | F      |     20000 |    1000000 |     2000000 |     500000 | 15000000 | 3000000 | 2018-01-03 |
++----+----------+------------+---------------+------------+--------+-----------+------------+-------------+------------+----------+---------+------------+
+6 rows in set (0.00 sec)
+
+mysql> update employee_payroll set Deductions = 9000 WHERE id = '1';
+Query OK, 1 row affected (0.04 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update employee_payroll set Deductions = 9000 WHERE id = '2';
+Query OK, 1 row affected (0.09 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update employee_payroll set Deductions = 7000 WHERE id = '3';
+Query OK, 1 row affected (0.09 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update employee_payroll set Deductions = 7000 WHERE id = '4';
+Query OK, 1 row affected (0.06 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update employee_payroll set Deductions = 7000 WHERE id = '5';
+Query OK, 1 row affected (0.05 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT *FROM EMPLOYEE_PAYROLL;
++----+----------+------------+---------------+------------+--------+-----------+------------+-------------+------------+----------+---------+------------+
+| ID | NAME     | PHONE_NO   | ADDRESS       | DEPARTMENT | GENDER | BASIC_PAY | DEDUCTIONS | TAXABLE_PAY | INCOME_TAX | NET_PAY  | SALARY  | START      |
++----+----------+------------+---------------+------------+--------+-----------+------------+-------------+------------+----------+---------+------------+
+|  1 | JOHN     | 7412856421 | CALIFORNIA    | Marketing  | M      |     20000 |       9000 |        NULL |       NULL |     NULL |  100000 | 2021-05-04 |
+|  2 | NICK     | 7895236410 | OKLOHOMA      | Marketing  | M      |     20000 |       9000 |        NULL |       NULL |     NULL |  200000 | 2021-04-03 |
+|  3 | WAYNE    |  999123999 | GOTHAM CITY   | Sales      | F      |     20000 |       7000 |        NULL |       NULL |     NULL |  300000 | 2021-03-02 |
+|  4 | NICHOLAS | 9823651240 | NEW YORK      | Sales      | M      |     20000 |       7000 |        NULL |       NULL |     NULL |  600000 | 2021-06-06 |
+|  5 | KANE     | 9864251320 | SAN FRANCISCO | Sales      | M      |     20000 |       7000 |        NULL |       NULL |     NULL |  700000 | 2021-07-07 |
+|  6 | Terisa   |     985628 | Mumbai        | Marketing  | F      |     20000 |    1000000 |     2000000 |     500000 | 15000000 | 3000000 | 2018-01-03 |
++----+----------+------------+---------------+------------+--------+-----------+------------+-------------+------------+----------+---------+------------+
+6 rows in set (0.00 sec)
+
+mysql> update employee_payroll set IncomeTax = 5000.00 WHERE id = '1' or '2' or '3' or '4';
+ERROR 1054 (42S22): Unknown column 'IncomeTax' in 'field list'
+mysql> update employee_payroll set Income_Tax = 5000.00 WHERE id = '1' or '2' or '3' or '4';
+Query OK, 6 rows affected (0.03 sec)
+Rows matched: 6  Changed: 6  Warnings: 0
+
+mysql> SELECT *FROM EMPLOYEE_PAYROLL;
++----+----------+------------+---------------+------------+--------+-----------+------------+-------------+------------+----------+---------+------------+
+| ID | NAME     | PHONE_NO   | ADDRESS       | DEPARTMENT | GENDER | BASIC_PAY | DEDUCTIONS | TAXABLE_PAY | INCOME_TAX | NET_PAY  | SALARY  | START      |
++----+----------+------------+---------------+------------+--------+-----------+------------+-------------+------------+----------+---------+------------+
+|  1 | JOHN     | 7412856421 | CALIFORNIA    | Marketing  | M      |     20000 |       9000 |        NULL |       5000 |     NULL |  100000 | 2021-05-04 |
+|  2 | NICK     | 7895236410 | OKLOHOMA      | Marketing  | M      |     20000 |       9000 |        NULL |       5000 |     NULL |  200000 | 2021-04-03 |
+|  3 | WAYNE    |  999123999 | GOTHAM CITY   | Sales      | F      |     20000 |       7000 |        NULL |       5000 |     NULL |  300000 | 2021-03-02 |
+|  4 | NICHOLAS | 9823651240 | NEW YORK      | Sales      | M      |     20000 |       7000 |        NULL |       5000 |     NULL |  600000 | 2021-06-06 |
+|  5 | KANE     | 9864251320 | SAN FRANCISCO | Sales      | M      |     20000 |       7000 |        NULL |       5000 |     NULL |  700000 | 2021-07-07 |
+|  6 | Terisa   |     985628 | Mumbai        | Marketing  | F      |     20000 |    1000000 |     2000000 |       5000 | 15000000 | 3000000 | 2018-01-03 |
++----+----------+------------+---------------+------------+--------+-----------+------------+-------------+------------+----------+---------+------------+
+6 rows in set (0.02 sec)
+
+mysql> update employee_payroll set Taxable_Pay = 2200 WHERE id = '1'or '2'or '3'or '4'or '5';
+Query OK, 6 rows affected (0.04 sec)
+Rows matched: 6  Changed: 6  Warnings: 0
+
+mysql> SELECT *FROM EMPLOYEE_PAYROLL;
++----+----------+------------+---------------+------------+--------+-----------+------------+-------------+------------+----------+---------+------------+
+| ID | NAME     | PHONE_NO   | ADDRESS       | DEPARTMENT | GENDER | BASIC_PAY | DEDUCTIONS | TAXABLE_PAY | INCOME_TAX | NET_PAY  | SALARY  | START      |
++----+----------+------------+---------------+------------+--------+-----------+------------+-------------+------------+----------+---------+------------+
+|  1 | JOHN     | 7412856421 | CALIFORNIA    | Marketing  | M      |     20000 |       9000 |        2200 |       5000 |     NULL |  100000 | 2021-05-04 |
+|  2 | NICK     | 7895236410 | OKLOHOMA      | Marketing  | M      |     20000 |       9000 |        2200 |       5000 |     NULL |  200000 | 2021-04-03 |
+|  3 | WAYNE    |  999123999 | GOTHAM CITY   | Sales      | F      |     20000 |       7000 |        2200 |       5000 |     NULL |  300000 | 2021-03-02 |
+|  4 | NICHOLAS | 9823651240 | NEW YORK      | Sales      | M      |     20000 |       7000 |        2200 |       5000 |     NULL |  600000 | 2021-06-06 |
+|  5 | KANE     | 9864251320 | SAN FRANCISCO | Sales      | M      |     20000 |       7000 |        2200 |       5000 |     NULL |  700000 | 2021-07-07 |
+|  6 | Terisa   |     985628 | Mumbai        | Marketing  | F      |     20000 |    1000000 |        2200 |       5000 | 15000000 | 3000000 | 2018-01-03 |
++----+----------+------------+---------------+------------+--------+-----------+------------+-------------+------------+----------+---------+------------+
+6 rows in set (0.00 sec)
+
+mysql> update employee_payroll set Taxable_Pay = 2000000 WHERE id = '6';
+Query OK, 1 row affected (0.04 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT *FROM EMPLOYEE_PAYROLL;
++----+----------+------------+---------------+------------+--------+-----------+------------+-------------+------------+----------+---------+------------+
+| ID | NAME     | PHONE_NO   | ADDRESS       | DEPARTMENT | GENDER | BASIC_PAY | DEDUCTIONS | TAXABLE_PAY | INCOME_TAX | NET_PAY  | SALARY  | START      |
++----+----------+------------+---------------+------------+--------+-----------+------------+-------------+------------+----------+---------+------------+
+|  1 | JOHN     | 7412856421 | CALIFORNIA    | Marketing  | M      |     20000 |       9000 |        2200 |       5000 |     NULL |  100000 | 2021-05-04 |
+|  2 | NICK     | 7895236410 | OKLOHOMA      | Marketing  | M      |     20000 |       9000 |        2200 |       5000 |     NULL |  200000 | 2021-04-03 |
+|  3 | WAYNE    |  999123999 | GOTHAM CITY   | Sales      | F      |     20000 |       7000 |        2200 |       5000 |     NULL |  300000 | 2021-03-02 |
+|  4 | NICHOLAS | 9823651240 | NEW YORK      | Sales      | M      |     20000 |       7000 |        2200 |       5000 |     NULL |  600000 | 2021-06-06 |
+|  5 | KANE     | 9864251320 | SAN FRANCISCO | Sales      | M      |     20000 |       7000 |        2200 |       5000 |     NULL |  700000 | 2021-07-07 |
+|  6 | Terisa   |     985628 | Mumbai        | Marketing  | F      |     20000 |    1000000 |     2000000 |       5000 | 15000000 | 3000000 | 2018-01-03 |
++----+----------+------------+---------------+------------+--------+-----------+------------+-------------+------------+----------+---------+------------+
+6 rows in set (0.02 sec)
+
+mysql> update employee_payroll set Net_Pay = 160000 WHERE id = '1';
+Query OK, 1 row affected (0.06 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update employee_payroll set Net_Pay = 160000 WHERE id = '2';
+Query OK, 1 row affected (0.05 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update employee_payroll set Net_Pay = 170000 WHERE id = '3';
+Query OK, 1 row affected (0.04 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update employee_payroll set Net_Pay = 170000 WHERE id = '4';
+Query OK, 1 row affected (0.04 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update employee_payroll set Net_Pay = 170000 WHERE id = '5';
+Query OK, 1 row affected (0.19 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT *FROM EMPLOYEE_PAYROLL;
++----+----------+------------+---------------+------------+--------+-----------+------------+-------------+------------+----------+---------+------------+
+| ID | NAME     | PHONE_NO   | ADDRESS       | DEPARTMENT | GENDER | BASIC_PAY | DEDUCTIONS | TAXABLE_PAY | INCOME_TAX | NET_PAY  | SALARY  | START      |
++----+----------+------------+---------------+------------+--------+-----------+------------+-------------+------------+----------+---------+------------+
+|  1 | JOHN     | 7412856421 | CALIFORNIA    | Marketing  | M      |     20000 |       9000 |        2200 |       5000 |   160000 |  100000 | 2021-05-04 |
+|  2 | NICK     | 7895236410 | OKLOHOMA      | Marketing  | M      |     20000 |       9000 |        2200 |       5000 |   160000 |  200000 | 2021-04-03 |
+|  3 | WAYNE    |  999123999 | GOTHAM CITY   | Sales      | F      |     20000 |       7000 |        2200 |       5000 |   170000 |  300000 | 2021-03-02 |
+|  4 | NICHOLAS | 9823651240 | NEW YORK      | Sales      | M      |     20000 |       7000 |        2200 |       5000 |   170000 |  600000 | 2021-06-06 |
+|  5 | KANE     | 9864251320 | SAN FRANCISCO | Sales      | M      |     20000 |       7000 |        2200 |       5000 |   170000 |  700000 | 2021-07-07 |
+|  6 | Terisa   |     985628 | Mumbai        | Marketing  | F      |     20000 |    1000000 |     2000000 |       5000 | 15000000 | 3000000 | 2018-01-03 |
++----+----------+------------+---------------+------------+--------+-----------+------------+-------------+------------+----------+---------+------------+
+6 rows in set (0.00 sec)
+
+mysql> CREATE TABLE Department ( department varchar(20) NOT NULL, PRIMARY KEY (department) );
+Query OK, 0 rows affected (0.89 sec)
+
+mysql>  INSERT INTO Department ( department ) VALUES ('Sales'),('Marketing');
+Query OK, 2 rows affected (0.10 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM Department;
++------------+
+| department |
++------------+
+| Marketing  |
+| Sales      |
++------------+
+2 rows in set (0.00 sec)
+
+mysql>  CREATE TABLE Employee ( id int, compID int, PhoneNumbe BIGINT(13), Address varchar(25), gender char(1),
+    -> ^C
+mysql>  CREATE TABLE Employee ( id int, compID int, PhoneNumber double, Address varchar(25), gender char(1),
+    -> PRIMARY KEY (id) );
+Query OK, 0 rows affected (0.21 sec)
+
+mysql> INSERT INTO Employee (id, compID, PhoneNumbe, Address, gender) VALUES ( 1, 10, 7775827779, 'Mubai', 'F'),
+    -> ^C
+mysql> INSERT INTO Employee (id, compID, PhoneNumbe, Address, gender) VALUES ( 1, 8, 7005820009, 'Mubai', 'F'),
+    ->  (2, 9, 885828889, 'Mumbai', 'M');
+ERROR 1054 (42S22): Unknown column 'PhoneNumbe' in 'field list'
+mysql> INSERT INTO Employee (id, compID, PhoneNumber, Address, gender) VALUES ( 1, 8, 7005820009, 'Mumbai', 'F'),
+    ->  (2, 9, 885828889, 'Mumbai', 'M');
+Query OK, 2 rows affected (0.10 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select*from employee;
++----+--------+-------------+---------+--------+
+| id | compID | PhoneNumber | Address | gender |
++----+--------+-------------+---------+--------+
+|  1 |      8 |  7005820009 | Mumbai  | F      |
+|  2 |      9 |   885828889 | Mumbai  | M      |
++----+--------+-------------+---------+--------+
+2 rows in set (0.00 sec)
+
+mysql> CREATE TABLE Emp_Department (empID int, Depart varchar(20) NOT NULL, FOREIGN KEY (empID) REFERENCES Employee (id),
+    -> FOREIGN KEY (Depart) REFERENCES Department (department), PRIMARY KEY (empID, Depart));
+Query OK, 0 rows affected (0.98 sec)
+
+mysql>  describe Emp_Department;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| empID  | int         | NO   | PRI | NULL    |       |
+| Depart | varchar(20) | NO   | PRI | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+2 rows in set (0.18 sec)
+
+mysql> INSERT INTO Emp_Department (empID, Depart) VALUES (1, 'Marketing');
+Query OK, 1 row affected (0.04 sec)
+
+mysql> INSERT INTO Emp_Department (empID, Depart) VALUES (1, 'Sales');
+Query OK, 1 row affected (0.11 sec)
+
+mysql> INSERT INTO Emp_Department (empID, Depart) VALUES (2, 'Marketing');
+Query OK, 1 row affected (0.04 sec)
+
+mysql> INSERT INTO Emp_Department (empID, Depart) VALUES (2, 'Sales');
+Query OK, 1 row affected (0.05 sec)
+
+mysql> select *from emp_department;
++-------+-----------+
+| empID | Depart    |
++-------+-----------+
+|     1 | Marketing |
+|     2 | Marketing |
+|     1 | Sales     |
+|     2 | Sales     |
++-------+-----------+
+4 rows in set (0.00 sec)
+
+mysql> SELECT * FROM Emp_Department WHERE empID = 1;
++-------+-----------+
+| empID | Depart    |
++-------+-----------+
+|     1 | Marketing |
+|     1 | Sales     |
++-------+-----------+
+2 rows in set (0.03 sec)
+
+mysql> SELECT * FROM Department WHERE department = 'sales';
++------------+
+| department |
++------------+
+| Sales      |
++------------+
+1 row in set (0.15 sec)
+
+mysql>
